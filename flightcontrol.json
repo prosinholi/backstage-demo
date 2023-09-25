@@ -4,7 +4,7 @@
     {
       "id": "backstage",
       "name": "Backstage",
-      "region": "us-east-1",
+      "region": "us-west-2",
       "source": {
         "branch": "main"
       },
@@ -17,8 +17,8 @@
           "dockerfilePath": "Dockerfile",
           "dockerContext": ".",
           "healthCheckPath": "/catalog",
-          "cpu": 2,
-          "memory": 4,
+          "cpu": 0.5,
+          "memory": 1,
           "domain": "backstage.yourapp.com",
           "port": 7007,
           "minInstances": 1,

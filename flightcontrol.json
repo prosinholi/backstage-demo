@@ -1,0 +1,30 @@
+{
+  "$schema": "https://app.flightcontrol.dev/schema.json",
+  "environments": [
+    {
+      "id": "backstage",
+      "name": "Backstage",
+      "region": "us-east-1",
+      "source": {
+        "branch": "main"
+      },
+      "services": [
+        {
+          "id": "backstage",
+          "name": "Backstage",
+          "type": "fargate",
+          "buildType": "docker",
+          "dockerfilePath": "Dockerfile",
+          "dockerContext": ".",
+          "healthCheckPath": "/catalog",
+          "cpu": 2,
+          "memory": 4,
+          "domain": "backstage.yourapp.com",
+          "port": 7007,
+          "minInstances": 1,
+          "maxInstances": 1
+        }
+      ]
+    }
+  ]
+}
